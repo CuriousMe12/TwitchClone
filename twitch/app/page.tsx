@@ -1,11 +1,10 @@
-import Image from "next/image";
-import { Button } from "@/components/ui/button";
+import { UserButton } from "@clerk/nextjs";
 
 export default function Home() {
   return (
-    <>
-      <Button>Click Me</Button>
-      <p className="text-red-500">Hello twitch clone</p>
-    </>
+    <div className="flex flex-col gap-y-2 p-1">
+      <h1>User Dashboard</h1>
+      <UserButton afterSignOutUrl="/" />
+    </div>
   );
 }
